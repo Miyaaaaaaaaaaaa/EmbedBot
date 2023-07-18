@@ -16,7 +16,7 @@
     /* Sets the z-index to ensure the button is on top of other elements */
     z-index: 1;
     /* Sets the width and height of the button */
-    width: 104px;
+    width: 52px;
     height: 52px;
     /* Changes the cursor to a pointer when hovering over the button */
     cursor: pointer;
@@ -34,4 +34,8 @@
  
     /* Adds a transition effect to the button when its size changes */
     transition: width 1s, height 1s;
+}
+
+.bpw-floating-button {
+    background-image: url(https://files.worldwildlife.org/wwfcmsprod/images/HERO_Penguins_Antarctica/story_full_width/9de57cats0_Medium_WW267491.jpg);
 }
