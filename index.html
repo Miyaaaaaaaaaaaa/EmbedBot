@@ -1,93 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Botpress in a div</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        color: white;
-        background-color: #000000;
-        font-family: Arial, sans-serif;
-      }
- 
-      .center-div {
-        width: 50vw;
-        height: 80vh;
-        background-color: rgb(102, 71, 255);
-        border-radius: 15px;
-        padding: 5px;
-        box-sizing: border-box;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
- 
-      @media only screen and (max-width: 600px) {
-        .center-div {
-          height: 40vh;
-          width: 80vw;
-          background-color: rgb(102, 71, 255);
-          border-radius: 15px;
-          padding: 5px;
-          box-sizing: border-box;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        }
-      }
-    </style>
-  </head>
- 
-  <body>
-    <div>
-      <p style="text-align: center;">Botpress Chatbot in a <span><</span><span>div></span></p>
-      <div class="absolute inset-4 ">
-        <div
-          class="center-div relative h-full w-full overflow-clip rounded-md border border-zinc-200 bg-white p-2 px-0 py-0"
-        >
-          <iframe
-            style="border: none;"
-            srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
-            <script>
-              window.botpressWebChat.init({
-                  'composerPlaceholder': 'Talk to me!',
-                  'botConversationDescription': 'Enjoy your time!',
-                  'botName': 'Bob',
-                  'botId': 'dd159ba6-bfdc-4206-8bac-09087fc8dd10',
-                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
-                  'messagingUrl': 'https://messaging.botpress.cloud',
-                  'clientId': 'dd159ba6-bfdc-4206-8bac-09087fc8dd10',
-                  'enableConversationDeletion': true,
-                  'showPoweredBy': true,
-                  'className': 'webchatIframe',
-                  'containerWidth': '100%25',
-                  'layoutWidth': '100%25',
-                  'hideWidget': true,
-                  'showCloseButton': false,
-                  'disableAnimations': true,
-                  'closeOnEscape': false,
-                  'showConversationsButton': false,
-                  'enableTranscriptDownload': false,
-                  'stylesheet':'https://webchat-styler-css.botpress.app/prod/70dc2a39-58fe-4771-ab73-de930a218969/v80055/style.css'
-                  
-              });
-            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
-            </script></body>"
-            width="100%"
-            height="100%"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Order here!",
+      "botConversationDescription": "We hate bad coffee, too.",
+      "botId": "f345d900-65c0-4101-80c3-cfcc652d7cdc",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "f345d900-65c0-4101-80c3-cfcc652d7cdc",
+      "lazySocket": true,
+      "botName": "Botbucks",
+      "avatarUrl": "https://cdn.discordapp.com/attachments/1117879312390045790/1151205277740318750/Botbucks_1.png",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/d18e5ce9-af80-42b3-936b-6ed676dc5180/v59514/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true
+  });
+</script>
